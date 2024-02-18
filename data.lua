@@ -1,5 +1,5 @@
 local itemname = "steel-chest"
-local graphics = "__modern-steel-chest__/graphics/"
+local graphics = "__billys-steel-chest__/graphics/"
 
 local item = data.raw["item"][itemname]
 item.icon = graphics.."icon.png"
