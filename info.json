@@ -1,0 +1,9 @@
+{
+    "name": "modern-steel-chest",
+    "version": "0.1.0",
+    "title": "Modern Steel Chest",
+    "author": "Me",
+    "factorio_version": "1.1",
+    "dependencies": ["base >= 1.1"],
+    "description": "Use logistic chest graphics for steel chests"
+}
