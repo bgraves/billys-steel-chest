@@ -1,46 +1,54 @@
-data.raw.item["steel-chest"].icon = "modern-steel-chest/graphics/icons/modern-steel-chest.png"
-data.raw.container["steel-chest"].icon = "modern-steel-chest/graphics/icons/modern-steel-chest-icon.png"
-data.raw.container["steel-chest"].picture =
-{
-  layers =
-  {
+local itemname = "steel-chest"
+local graphics = "__modern-steel-chest__/graphics/"
+local item = data.raw.item[itemname]
+local entity = data.raw.container[itemname]
+item.icon = graphics.."icon.png"
+entity.icon = graphics.."icon.png"
+entity.circuit_wire_connection_point = {
+    wire = {
+        green = util.by_pixel(13, -11),
+        red = util.by_pixel(13, -14)
+    },
+    shadow = {
+        green = util.by_pixel(31, 4),
+        red = util.by_pixel(31, 1)
+    }
+}
+entity.picture = {layers = {
     {
-      filename = "modern-steel-chest/graphics/entity/modern-steel-chest/modern-steel-chest.png",
-      priority = "extra-high",
-      width = 34,
-      height = 38,
-      frame_count = 7,
-      shift = util.by_pixel(0, -2),
-      hr_version =
-      {
-        filename = "modern-steel-chest/graphics/entity/modern-steel-chest/hr-modern-steel-chest.png",
+        filename = graphics.."entity.png",
         priority = "extra-high",
-        width = 66,
-        height = 74,
+        width = 32,
+        height = 37,
         frame_count = 7,
         shift = util.by_pixel(0, -2),
-        scale = 0.5
-      }
+        hr_version = {
+            filename = graphics.."hr-entity.png",
+            priority = "extra-high",
+            width = 64,
+            height = 74,
+            frame_count = 7,
+            shift = util.by_pixel(0, -2),
+            scale = 0.5
+        }
     },
     {
-      filename = "modern-steel-chest/graphics/entity/modern-steel-chest/modern-steel-chest-shadow.png",
-      priority = "extra-high",
-      width = 56,
-      height = 24,
-      repeat_count = 7,
-      shift = util.by_pixel(12, 5),
-      draw_as_shadow = true,
-      hr_version =
-      {
-        filename = "modern-steel-chest/graphics/entity/modern-steel-chest/hr-modern-steel-chest-shadow.png",
+        filename = graphics.."shadow.png",
         priority = "extra-high",
-        width = 112,
-        height = 46,
+        width = 51,
+        height = 25,
         repeat_count = 7,
-        shift = util.by_pixel(12, 4.5),
+        shift = util.by_pixel(10, 4),
         draw_as_shadow = true,
-        scale = 0.5
-      }
+        hr_version = {
+            filename = graphics.."hr-shadow.png",
+            priority = "extra-high",
+            width = 102,
+            height = 50,
+            repeat_count = 7,
+            shift = util.by_pixel(10, 4),
+            draw_as_shadow = true,
+            scale = 0.5
+        }
     }
-  }
-}
+}}
