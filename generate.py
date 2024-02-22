@@ -39,10 +39,10 @@ def averageimages(files):
 
 outputfolder = 'graphics'
 groupfolder = 'source-graphics'
-groups = ['entity', 'hr-entity', 'hr-remnants', 'icon']
 root, _ = os.path.split(os.path.realpath(__file__))
-for group in groups:
-    wildcard = os.path.join(root, groupfolder, group, '*.png')
+groupfolder = os.path.join(root, groupfolder)
+for group in os.listdir(groupfolder):
+    wildcard = os.path.join(groupfolder, group, '*.png')
     files = glob.glob(wildcard)
     if len(files) != len(colorkeywords):
         raise ValueError(f'Expected {len(colorkeywords)} files but found {len(files)} in {group} folder {wildcard}')
